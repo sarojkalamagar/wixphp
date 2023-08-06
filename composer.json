@@ -1,0 +1,17 @@
+{
+    "name": "sarojkalamagar/wixphp",
+    "description": "A wrapper around Wix API to facilitate faster app development.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Sarojkalamagar\\Wixphp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Saroj Kala Magar",
+            "email": "sarojkalamagar@gmail.com"
+        }
+    ],
+    "require": {}
+}
