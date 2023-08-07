@@ -1,6 +1,8 @@
 # Installation
 
-`composer require sarojkalamagar/wixphp:dev-main`
+```bash
+composer require sarojkalamagar/wixphp:dev-main
+```
 
 # Configuration (.env)
 
@@ -11,10 +13,16 @@
 # Usage
 
 ## Fetch products
-`$products = WixProduct::ownedBy($siteId)->get();`
+```php
+$products = WixProduct::ownedBy($siteId)->get();
+```
 
 ## Sort
-`$products = WixProduct::ownedBy($siteId)->sortByName('asc')->get();`
+```php
+$products = WixProduct::ownedBy($siteId)->sortByName('asc')->get();
+```
 
 ## Filter
-`$products = WixProduct::ownedBy($siteId)->whereNameEquals('keywords')->get();`
+```php
+$products = WixProduct::ownedBy($siteId)->whereNameEquals('keywords')->get();
+```
