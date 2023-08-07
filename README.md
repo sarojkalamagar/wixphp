@@ -10,4 +10,11 @@
 
 # Usage
 
+## Fetch products
 `$products = WixProduct::ownedBy($siteId)->get();`
+
+## Sort
+`$products = WixProduct::ownedBy($siteId)->sortByName('asc')->get();`
+
+## Filter
+`$products = WixProduct::ownedBy($siteId)->whereNameEquals('keywords')->get();`
