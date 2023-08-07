@@ -4,8 +4,8 @@
 
 # Configuration (.env)
 
-`WIX_APP_ID=[Your app ID]`
-`WIX_CLIENT_ID=[OAuth app ID]`
+`WIX_APP_ID=[Your app ID]`<br />
+`WIX_CLIENT_ID=[OAuth app ID]`<br />
 `WIX_CLIENT_SECRET=[OAuth app secret]`
 
 # Usage
