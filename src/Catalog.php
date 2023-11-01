@@ -2,10 +2,12 @@
 
 namespace Sarojkalamagar\Wixphp;
 
-use GuzzleHttp\Client;
+use Sarojkalamagar\Wixphp\Traits\MakesApiRequest;
 
 class Catalog
 {
+
+    use MakesApiRequest;
 
     /**
      *--------------------------------------------------------------------------
@@ -30,47 +32,6 @@ class Catalog
 
         $endPoint = 'https://www.wixapis.com/stores/v1/products/query';
 
-        /*
-        |--------------------------------------------------------------------------
-        | Headers
-        |--------------------------------------------------------------------------
-        |
-        */
-
-        $headers = [
-            'Content-Type' => 'application/json',
-            'Authorization' => $accessToken
-        ];
-
-        /*
-        |--------------------------------------------------------------------------
-        | HTTP client
-        |--------------------------------------------------------------------------
-        |
-        */
-
-        $client = new Client(['base_uri' => $endPoint]);
-
-        /*
-        |--------------------------------------------------------------------------
-        | Response
-        |--------------------------------------------------------------------------
-        |
-        */
-
-        $response = $client->post($endPoint, [
-            'headers' => $headers,
-            'form_params' => $filterParameters,
-        ]);
-
-        /*
-        |--------------------------------------------------------------------------
-        | Handling response
-        |--------------------------------------------------------------------------
-        |
-        */
-
-        $body = $response->getBody()->getContents();
-        return $body;
+        return $this->withAccessToken($accessToken)->post($endPoint, $filterParameters);
     }
 }
